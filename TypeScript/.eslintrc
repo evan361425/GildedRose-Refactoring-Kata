@@ -1,0 +1,41 @@
+{
+  "extends": [
+    "google",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:mocha/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "mocha"
+  ],
+  "rules": {
+    "@typescript-eslint/array-type": "error",
+    "@typescript-eslint/no-floating-promises": "error",
+    "@typescript-eslint/no-shadow": "warn",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "eqeqeq": "error",
+    "indent": [
+      "error",
+      2
+    ],
+    "no-console": "off",
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "radix": "error",
+    "require-jsdoc": "off"
+  }
+}

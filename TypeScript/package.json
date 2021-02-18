@@ -6,21 +6,27 @@
     "precompile": "rimraf app/**/*.js test/**/*.js",
     "compile": "tsc",
     "pretest": "rimraf app/**/*.js test/**/*.js",
-    "test": "nyc mocha"
+    "test": "nyc mocha",
+    "test-text": "npx ts-node test/golden-master-text.ts",
+    "lint": "eslint 'app/**/*.ts' 'test/**/*.ts'"
   },
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "@types/chai": "~3.5.2",
-    "@types/mocha": "~2.2.41",
-    "@types/node": "~7.0.18",
-    "chai": "~4.2.0",
-    "mocha": "~8.2.1",
+    "@types/chai": "~4.2.15",
+    "@types/mocha": "~8.2.1",
+    "@types/node": "~14.14.28",
+    "@typescript-eslint/eslint-plugin": "~4.15.1",
+    "chai": "~4.3.0",
+    "eslint": "~7.20.0",
+    "eslint-config-google": "~0.14.0",
+    "eslint-plugin-mocha": "~8.0.0",
+    "mocha": "~8.3.0",
     "nyc": "~15.1.0",
     "rimraf": "~3.0.2",
     "source-map-support": "0.5.19",
     "ts-node": "~9.1.1",
-    "typescript": "~4.1.3"
+    "typescript": "~4.1.5"
   },
   "nyc": {
     "extension": [
